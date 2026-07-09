@@ -147,6 +147,22 @@
     </div>
   </section>
 
+  <!-- Teaser: framework figure -->
+  <section class="hero teaser">
+    <div class="hero-body">
+      <div class="container is-wide">
+        <figure class="figure">
+          <img src="static/images/fig_framework.png" alt="UniEFS overall framework: Stage 1 masked signal modeling on fMRI frames, Stage 2 EEG-to-fMRI mapping with a frozen pretrained fMRI encoder/decoder, and the context-aware EEG embedding module.">
+          <figcaption>
+            <span class="fig-label">Figure 1. Overall framework.</span>
+            (A) Stage 1: masked signal modeling on fMRI frames. (B) Stage 2: EEG-to-fMRI mapping &mdash; the
+            pretrained fMRI encoder and decoder are frozen. (C) Context-aware EEG embedding with prefix prompt tokens.
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
   <!-- Abstract -->
   <section class="section hero is-light">
     <div class="container is-max-desktop">
@@ -312,7 +328,28 @@
               </tbody>
             </table>
           </div>
-          <div class="content is-size-5 has-text-justified">
+
+          <figure class="figure">
+            <img src="static/images/fig_mainresult.png" alt="Resting-state reconstruction performance: reconstruction accuracy maps, top predictive brain networks, and per-region gains from context embeddings.">
+            <figcaption>
+              <span class="fig-label">Figure 2. Resting-state reconstruction performance.</span>
+              (A, B) Reconstruction performance and top predictive brain networks based on network-aggregated TCorr.
+              (C) Regional performance difference with vs. without context embedding. (D) Distribution of performance
+              gains from context embedding across regions and samples; points denote test scans.
+            </figcaption>
+          </figure>
+
+          <figure class="figure">
+            <img src="static/images/fig_vigilance.png" alt="Performance improvements with vigilance embedding, within resting-state and in zero-shot rest-to-task transfer.">
+            <figcaption>
+              <span class="fig-label">Figure 3. Performance improvements with vigilance embedding.</span>
+              (A&ndash;C) Within resting-state evaluation. (D&ndash;F) Zero-shot transfer from rest to task. (A, D) Regions
+              with the greatest improvement. (B, E) Region-wise improvement within brain networks. (C, F) The 6 networks
+              most represented among the top-100 regions benefiting from vigilance embedding.
+            </figcaption>
+          </figure>
+
+          <div class="content is-size-5 has-text-justified" style="margin-top: 2rem;">
             <p>
               Beyond within-domain evaluation, UniEFS transfers <strong>zero-shot</strong> from resting-state to an
               auditory task, preserves subject-specific connectome fingerprints, and &mdash; on an external Parkinson's
@@ -320,6 +357,27 @@
               from controls without any fine-tuning or disease supervision.
             </p>
           </div>
+
+          <figure class="figure">
+            <div class="container is-wide">
+              <img src="static/images/fig_zeroshot.png" alt="Zero-shot cross-dataset fMRI reconstruction, including rest-to-task transfer and leave-one-dataset-out performance.">
+            </div>
+            <figcaption>
+              <span class="fig-label">Figure 4. Zero-shot cross-dataset fMRI reconstruction.</span>
+              (A&ndash;G) Zero-shot rest-to-task transfer: prediction performance across regions, example reconstructed
+              time series (insula), baseline comparison, and network-wise reconstruction (e.g., Salience/Ventral
+              Attention Network). (H) Leave-one-dataset-out performance: full-prompt vs. no-prompt vs. within-site training.
+            </figcaption>
+          </figure>
+
+          <figure class="figure">
+            <img src="static/images/fig_parkinson.png" alt="Zero-shot EEG latent embeddings on the Parkinson's disease dataset visualized with t-SNE.">
+            <figcaption>
+              <span class="fig-label">Figure 5. Zero-shot EEG latent.</span>
+              (A) 2D t-SNE colored by subject. (B) 3D t-SNE colored by group (Parkinson's disease vs. control), from a
+              model trained only to reconstruct fMRI &mdash; with no disease supervision or fine-tuning.
+            </figcaption>
+          </figure>
         </div>
       </div>
     </div>
